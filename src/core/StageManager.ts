@@ -15,6 +15,7 @@ class StageManager {
     private _stage:PIXI.Container;
     private _renderer:PIXI.SystemRenderer;
     private static _layers:LayerDictionary;
+    
 
     static _instance:StageManager;
 

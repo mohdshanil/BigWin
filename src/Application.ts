@@ -19,6 +19,7 @@ export class Application {
     protected _stageWidth:number;
     protected _stageHeight:number;
     protected _baseUrl:string;
+    protected _textures:PIXI.loaders.Resource;
 
     constructor(assets?:IAssetsDictionary, baseUrl:string = ""){
         this._baseUrl = baseUrl;
@@ -26,6 +27,7 @@ export class Application {
         this._stageHeight = BasicStageConfig.stageHeight;
         this._backgroundLayer = StageManager.getLayer(BasicStageConfig.LAYER_BACK_GROUND);
         this._foregroundLayer = StageManager.getLayer(BasicStageConfig.LAYER_FORE_GROUND);
+
         this.loadAssets(assets);
         document.addEventListener('keydown', (event:KeyboardEvent) => this.onKeyDown(event));
     }
