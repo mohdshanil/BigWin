@@ -64,11 +64,11 @@ protected createSpriteFrames():void{
         // create an array of textures from an image path
     let frames = [];
 
-    for (let i = 0; i < 30; i++) {debugger;
-        let val = i < 10 ? '0' + i : i;
+    for (let i = 27; i < 48; i++) {
+        //let val = i < 10 ? '0' + i : i;
 
         // magically works since the spritesheet was loaded with the pixi loader
-        frames.push(PIXI.Texture.fromFrame('rollSequence00' + val + '.png'));
+        frames.push(PIXI.Texture.fromFrame('BW_000' + i + '.png'));
     }
     
     // create an AnimatedSprite (brings back memories from the days of Flash, right ?)
