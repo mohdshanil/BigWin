@@ -49,6 +49,7 @@ export class Application {
     private onAssetsLoaded(loader:PIXI.loaders.Loader, resources:PIXI.loaders.IResourceDictionary){
         this._resources = resources;
         this.initAnimations();
+        this.createSpriteFrames();
     }
 
 
