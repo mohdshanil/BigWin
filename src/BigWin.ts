@@ -41,8 +41,7 @@ private requestAnimationFrame:any;
         bidStateText.style.fill = 0xEAB348;
         bidStateText.position.set(this._stageWidth * 0.5, this._stageHeight * 0.6);
         this._foregroundLayer.addChild(bidStateText);
-        this.i=0;
-        this.gameLoop();
+        
 
 
     }
