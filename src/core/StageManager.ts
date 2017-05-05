@@ -15,7 +15,7 @@ class StageManager {
     private _stage:PIXI.Container;
     private _renderer:PIXI.SystemRenderer;
     private static _layers:LayerDictionary;
-    
+
 
     static _instance:StageManager;
 
@@ -34,7 +34,7 @@ class StageManager {
 
     private createRenderer(htmlElement:HTMLElement, stageConfig:StageConfig){
         this._stage = new PIXI.Container();
-        this._renderer = new PIXI.WebGLRenderer(stageConfig.stageWidth, stageConfig.stageHeight, stageConfig.webGLRendererOptions);
+        this._renderer = new PIXI.CanvasRenderer(stageConfig.stageWidth, stageConfig.stageHeight, stageConfig.webGLRendererOptions);
         htmlElement.appendChild(this._renderer.view);
     }
 
