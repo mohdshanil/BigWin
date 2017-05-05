@@ -20,12 +20,9 @@ private requestAnimationFrame:any;
 
 
     protected initAnimations(): void {
-        debugger;
+        
         super.initAnimations();
-        this.requestAnimationFrame = (this.gameLoop)
-        {
-          requestAnimationFrame(this.gameLoop);
-        };
+        
         let textStyle: PIXI.TextStyleOptions = {
             "fontFamily": "Futura LT",
             "fontSize": "40px",
@@ -50,14 +47,5 @@ private requestAnimationFrame:any;
 
     }
 
-    protected gameLoop(): void{
-      this.i++;
-      this.textures = this.getTextures("bw-intro");
-      let sprite: PIXI.Sprite = new PIXI.Sprite(this.textures[this.i]);
-      sprite.anchor.set(0.5, 0.5);
-      sprite.position.set(this._stageWidth * 0.5, this._stageHeight * 0.6);
-      this._foregroundLayer.addChild(sprite);
-        this.requestAnimationFrame();
-
-    }
+   
 }
