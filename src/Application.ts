@@ -29,7 +29,7 @@ export class Application {
     this._stageHeight = BasicStageConfig.stageHeight;
     this._backgroundLayer = StageManager.getLayer(BasicStageConfig.LAYER_BACK_GROUND);
     this._foregroundLayer = StageManager.getLayer(BasicStageConfig.LAYER_FORE_GROUND);
-    
+
 
     this.loadAssets(assets);
     document.addEventListener('keydown', (event: KeyboardEvent) => this.onKeyDown(event));
@@ -49,7 +49,7 @@ export class Application {
 
   }
 
-  private onAssetsLoaded(loader: PIXI.loaders.Loader, resources: PIXI.loaders.IResourceDictionary) {
+  private onAssetsLoaded(loader: PIXI.loaders.Loader, resources: PIXI.loaders.IResourceDictionary) {debugger;
     this._resources = resources;
     this.initAnimations();
     this.createSpriteFrames();
@@ -66,28 +66,8 @@ export class Application {
     this._backgroundLayer.addChild(gfx);
   }
 
-  protected createSpriteFrames(): void {
-    // create an array of textures from an image path
-    let frames = [];
-
-    for (let i = 27; i < 48; i++) {
-      frames.push(PIXI.Texture.fromFrame('BW_000' + i + '.png'));
-    }
-    // create an AnimatedSprite (brings back memories from the days of Flash, right ?)
-    let anim = new PIXI.extras.AnimatedSprite(frames);
-    /*
-     * An AnimatedSprite inherits all the properties of a PIXI sprite
-     * so you can change its position, its anchor, mask it, etc
-     */
-    anim.x = 345;
-    anim.y = 345;
-    anim.scale.set(0.8);
-    anim.anchor.set(0.5);
-    anim.animationSpeed = 0.1;
-    anim.scale.set(0.75 + Math.random() * 0.5);
-    anim.play();
-    this._foregroundLayer.addChild(anim);
-
+  protected createSpriteFrames(): void {debugger;
+    console.log("Creating Sprite Amimation")
   }
 
   public getTexture(name: string): PIXI.Texture {

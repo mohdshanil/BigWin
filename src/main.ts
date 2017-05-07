@@ -6,16 +6,15 @@ import {StageManager} from "./core/StageManager";
 import {BasicStageConfig} from "./config/BasicStageConfig";
 import {Example} from "./Example";
 import {BigWin} from "./BigWin";
-
+import {messages} from "./MessageConstants";
 require("pixi.js");
 require("pixi-spine");
 require("pixi-particles");
-require("gsap"); 
+require("gsap");
 require("sat");
 
 
 let stagemanager = new StageManager(document.body, new BasicStageConfig());
 
 //Entry point for your application. Just instantiate yor main class here.
-// let game = new Example();
-let game = new BigWin();
+let game = new BigWin(messages);
